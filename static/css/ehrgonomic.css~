@@ -1,6 +1,0 @@
-.hero-unit h1 {
-	font-size: 32px;
-}
-.err {
-	font-style: red;
-}

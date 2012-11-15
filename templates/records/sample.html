@@ -10,35 +10,41 @@
     <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
     <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
 	<link href="{{ STATIC_URL }}css/ehrgonomic.css" rel="stylesheet">
-
+    
 </head>
 
 <body>
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span8">
-        <h1>Elle Ross</h1>
-        <div id="demographics">
-            Gender: Female
-            Martial Status: Married
-            Religious Affiliation: Christian
-            Ethnicity: Asian
-            Language Spoken: English
-            Address: 17 Daws Road, Portland, OR 97006
-            Telephone: 415-555-1229
-            Birthday: March 7, 1960
+            <div class="row-fluid">            
+            <h1 id="patient-name" class="span8">Elle Ross Schnictelstein VII</h1>
+            <div class="span4 address">17 Daws Road<br /> Portland, OR 97006<br /> 415-555-1229</div>
+            </div>
+        <div id="demographics" class="row-fluid">
+            <div class="span6 block demo-block"> 
+            <div class="item demo-item"><span class="field-title">Gender:</span> Female</div>
+            <div class="item demo-item"><span class="field-title">Birthday:</span> March 7, 1960 (Age 52)</div>
+            <div class="item demo-item"><span class="field-title">Language Spoken:</span> English</div>
+            </div>
+            <div class="span6 block demo-block">
+            <div class="item demo-item"><span class="field-title">Martial Status:</span> Married</div>
+            <div class="item demo-item"><span class="field-title">Religious Affiliation:</span> Christian</div>
+            <div class="item demo-item"><span class="field-title">Ethnicity:</span> Asian</div>
+            
+            </div>
         </div>
         </div>
         <div class="span4">
-            <div id="provider"><div class="span2">Provider</div>
-            <div class="span10">Ashby Medical Center
-            1002 Healthcare Dr, Portland, OR 97266
+            <div id="provider"><div class="span3">Provider</div>
+            <div class="span9 address">Ashby Medical Center<br />
+            1002 Healthcare Dr<br /> Portland, OR 97266<br />
             415-555-1200</div>
             </div>
-            <div id="guardian"><div class="span2">Guardian</div>
-            <div class="span10">Role: Sister
-            Martha Shan
-            1357 Amber Drive, Beaverton, OR 97006
+            <div id="guardian"><div class="span3">Guardian<br />(Sister)</div>
+            <div class="span9 address">
+            Martha Shan<br />
+            1357 Amber Drive<br />Beaverton, OR 97006<br />
             816-276-6909</div>
             </div>
         </div>
@@ -46,23 +52,36 @@
     </div>
 
     <hr />
-
+<div class="row-fluid">
+    <div class="span12" id="warnings">
+    <h2><img src="{{STATIC_URL}}img/error.png" class="warning-icon" />Warnings</h2>     
+    <div class="warning uber-warning" id="warning_1">
+        STOP TAKING CODEINE! Drug-Allergy conflict. 
+    </div>    
+    <div class="warning" id="warning_1">
+        Carry an Epi-Pen at all times! Use if exposed to Bee Stings and see a doctor right away.
+    </div>
+    <div class="warning" id="warning_1">
+        Check the label! You are currently taking XXmg Acetominophen per day. Do not take over-the-counter medicines that contain acetominophen.
+    </div>    
+    </div>
+</div><br />
 <div class="row-fluid">
     <div class="span12" id="plans">
     <h2>Plan of Care</h2>
         <div class="plan" id="plan_1">
         Planned Activity Name: Office consultation
-        Planned Date: May 28, 2007
+        Planned Date: December 3, 2012
         Instructions: Consultation with Dr. George Potomac for Asthma
         </div>
-        <div class="plan" id="plan_1">
-        Planned Activity Name: Chest X-Ray
-        Planned Date: June 1, 2007
+        <div class="plan" id="plan_2">
+        Planned Activity Name: Sputum Culture
+        Planned Date: December 3, 2012
         Instructions: 
         </div>
-        <div class="plan" id="plan_1">
-        Planned Activity Name: Sputum Culture
-        Planned Date: May 28, 2007
+        <div class="plan" id="plan_3">
+        Planned Activity Name: Chest X-Ray
+        Planned Date: December 15, 2012
         Instructions: 
         </div>
     </div>
@@ -72,6 +91,11 @@
 
 <div class="row-fluid">
     <div class="span6" id="allergies"><h2>Allergies</h2>
+        <div class="allergy" id="allergy_3">
+        Allergy Name: Bee Stings
+        Reaction: Anaphylactic Shock
+        Severity: Severe
+        </div>
         <div class="allergy" id="allergy_1">
         Allergy Name: Penicillin
         Reaction: Hives
@@ -81,11 +105,6 @@
         Allergy Name: Codeine
         Reaction: Shortness of Breath
         Severity: Moderate
-        </div>
-        <div class="allergy" id="allergy_3">
-        Allergy Name: Bee Stings
-        Reaction: Anaphylactic Shock
-        Severity: Severe
         </div>
     </div>
 
@@ -101,7 +120,7 @@
         Rate Quantity (value / unit): 1 / day
         Name of Prescriber: Ashby Medical Center
         </div>
-        <div class="medication" id="medication_1">
+        <div class="medication" id="medication_2">
         Date: December 10, 2003
         Type: Tablet
         Name of Medication: Indomethacin
@@ -115,88 +134,113 @@
 </div>
 
 <hr />
-<h2 style="text-align:center;">Your Health Timeline</h2>
-<div class="progress">
-    <div class="bar bar-success" style="width: 35%;"></div>
-    <div class="bar bar-warning" style="width: 25%;"></div>
+<h2 style="text-align:center;">Health Timeline</h2>
+<div class="row-fluid timeline-legend">
+    <div class="span6">Show: Immunizations | Encounters | Problems | Procedures</div>
+    <div class="span6">From: _________ to _________</div>
 </div>
-
-    <div id="immunizations"># Immunizations
+<div class="progress timeline">
+    <div class="bar tick" style="width: 10%;">2003</div>
+    <div class="bar tick" style="width: 10%;">2004</div>
+    <div class="bar tick" style="width: 10%;">2005</div>
+    <div class="bar tick" style="width: 10%;">2006</div>
+    <div class="bar tick" style="width: 10%;">2007</div>
+    <div class="bar tick" style="width: 10%;">2008</div>
+    <div class="bar tick" style="width: 10%;">2009</div>
+    <div class="bar tick" style="width: 10%;">2010</div>
+    <div class="bar tick" style="width: 10%;">2011</div>
+    <div class="bar tick" id="last-tick" style="width: 9%;">2012</div>
+</div>
+<div class="progress timeline">
+    <div class="bar tick problems" style="width:5%;"></div>
+</div>
+<div class="row-fluid">
+    <div class="block timeline-block span3">
+    <div class="timeline-title immunizations">Immunizations</div>
         <div class="immunization" id="immunization_1">
-        Date: May 2001
+        Date: May 2004
         Immunization Name: Influenza virus vaccine, IM
         Type: Intramuscular injection
         Dose Quantity (value / unit): 50 / mcg
         Education/Instructions: Possible flu-like symptoms for three days
         </div>
         <div class="immunization" id="immunization_2">
-        Date: April 2000
+        Date: April 2003
         Immunization Name: Tetanus and diphtheria toxoids, IM
         Type: Intramuscular injection
         Dose Quantity (value / unit) 50 / mcg
         Education/Instructions: Mild pain or soreness in the local area
         </div>
     </div>
-
-    <div id="encounters">
-    # Encounters
+    <div class="block timeline-block span3">
+    <div class="timeline-title encounters">Encounters</div>
         <div class="encounter" id="encounter_1">
         Encounter: ED Visit for Ankle Sprain
         Provider: Dr. Henry Seven
         Location: Community Hospital
-        Date: March 28, 2005
+        Date: March 28, 2008
         </div>
-        <div class="encounter" id="encounter_1">
+        <div class="encounter" id="encounter_2">
         Encounter: Gall Bladder Surgery
         Provider: Dr. Bala Venktaraman
         Location: Ashby Medical Center
-        Date: September 28, 2002
+        Date: September 28, 2005
         </div>
-        <div class="encounter" id="encounter_1">
+        <div class="encounter" id="encounter_3">
         Encounter: Labor and Delivery
         Provider: Dr. Tiffany Martinez
         Location: Ashby Medical Center
-        Date: March 21, 2002
+        Date: March 21, 2005
         </div>
-        <div class="encounter" id="encounter_1">
+        <div class="encounter" id="encounter_4">
         Encounter: ED Visit for Acute Cholecystitis
         Provider: Dr. Tim Lee
         Location: Ashby Medical Center
-        Date: October 28, 2001
+        Date: October 28, 2004
         </div>
     </div>
 
-    <div id="problems">
-    # Problem List
+    <div class="block timeline-block span3">
+    <div class="timeline-title problems">Problem List</div>
         <div class="problem" id="problem_1">
         Observation: Ankle Sprain
         Status: Active
-        Date: March 28, 2005
+        Date: March 28, 2008
         Comments: Slipped on ice and fell.
         </div>
-        <div class="problem" id="problem_1">
+        <div class="problem" id="problem_2">
         Observation: Cholecystitis
         Status: Resolved
-        Date: September 28, 2002
+        Date: September 28, 2005
         Comments: Surgery postponed until after delivery
         </div>
     </div>
-
-    <div id="procedures">
-    # Procedures
+    
+    <div class="block timeline-block span3">
+    <div class="timeline-title procedures">Procedures</div>
         <div class="procedure" id="procedure_1">
         Procedure: Laparoscopic Cholecystectomy 
-        Date: September 28, 2002
+        Date: September 28, 2005
         Provider: Dr. Bala Venktaraman
         Location: Ashby Medical Center
         </div>
-        <div class="procedure" id="procedure_1">
+        <div class="procedure" id="procedure_2">
         Procedure: Cesarian Section
-        Date: March 22, 2002
+        Date: March 22, 2005
         Provider: Dr. Tiffany Martinez
         Location: Ashby Medical Center 
         </div>
     </div>
 </div>
+</div>
+
+    <!-- JavaScript placed at the end of the document so the pages load faster -->
+    <!-- Optional: Include the jQuery library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ 
+    <!-- Optional: Incorporate the Bootstrap Javascript plugins -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>    
+
+
 </body>
 </html>

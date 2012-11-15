@@ -1,5 +1,5 @@
-body {
-    background-color: red;
+div {
+    border: 1px solid black;
 }
 .hero-unit h1 {
 	font-size: 32px;

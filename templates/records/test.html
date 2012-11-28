@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sample Test Result</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simple Django Wiki">
+    <meta name="author" content="John Healy">
+
+    <link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+    <link href="{{ STATIC_URL }}css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="{{ STATIC_URL }}css/ehrgonomic.css" rel="stylesheet">
+    
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="test">
+    <h2 class="test-title">Lipid Panel - November 2005</h2>
+    <p>
+    <div class="test-item danger">Cholesterol: 240 MG/DL 
+    <p>Your cholesterol is very high, which may lead to multiple health problems. Create a plan with your doctor that includes diet, exercise, and potential medical interventions. 
+    </p> - (Target: <200)
+    <div class="progress timeline">
+      <div class="bar tick" style="width: 33%;">Target Range</div>
+      <div class="bar tick" style="width: 33%;">Elevated</div>
+      <div class="bar tick" id="last-tick" style="width: 33%;">High</div>
+    </div>
+<div class="points" style="margin-top:-20px; margin-bottom: 10px;">
+    <span class="badge badge-danger" style="margin-left: 81%;">You: 240</span>
+</div>
+    </div>
+    <div class="test-item caution">Triglyceride: 189 MG/DL 
+    <p>Your triglycerides levels are elevated. If left unchecked, this can indicate XXXXXXXXXXX. 
+    </p>(Target: <150)
+    
+    </div>
+    <div class="test-item normal">HDL: 43 MG/DL - (Target: >40)</div>
+    <div class="test-item normal">Cholesterol, NON-HDL: 76 MG/DL</div>
+    <div class="test-item normal">LDL: 241 MG/DL</div>
+    </p>
+  </div>
+</div>
+
+<div class="container-fluid">
+<h2 class="test-title">Urinalysis</h2>
+  <div class="test-item">Appearance / color</div>
+  <div class="test-item">Odor</div>
+  <div class="test-item">Turbidity</div>
+  <div class="test-item">Specific gravity</div>
+  <div class="test-item">Acidity (pH)</div>
+  <div class="test-item">Glucose</div>
+  <div class="test-item">Ketones</div>
+  <div class="test-item">Protein</div>
+  <div class="test-item">Bilirubin</div>
+  <div class="test-item">Red blood cells</div>
+  <div class="test-item">White blood cells</div>
+  <div class="test-item">Casts</div>
+  <div class="test-item">Crystals</div>
+  <div class="test-item">Bacteria</div>
+  <div class="test-item">Parasites</div>
+  <div class="test-item">Leukoesterase</div>
+  <div class="test-item">Nitrites</div>
+</div>
+
+    <!-- JavaScript placed at the end of the document so the pages load faster -->
+    <!-- Optional: Include the jQuery library -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+ 
+    <!-- Optional: Incorporate the Bootstrap Javascript plugins -->
+    <script src="http://twitter.github.com/bootstrap/assets/js/bootstrap.js"></script>    
+
+
+</body>
+</html>

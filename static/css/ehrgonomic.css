@@ -1,9 +1,11 @@
 @font-face {
   font-family: "AvalonRegular";
+  src: url( /static/fonts/Avalon-Book.eot ); /* IE */  
   src: url("/static/fonts/Avalon-Book.otf");
   }
 @font-face {
   font-family: "AvalonBold";
+  src: url( /static/fonts/Avalon-Bold.eot ); /* IE */  
   src: url("/static/fonts/Avalon-Bold.otf");
   }
 

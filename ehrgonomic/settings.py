@@ -166,9 +166,5 @@ LOGGING = {
     }
 }
 
-STATICFILES_DIRS = (
-     os.path.join(PROJECT_DIR, 'static'),
-)
-
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()

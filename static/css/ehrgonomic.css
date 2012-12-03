@@ -1,14 +1,26 @@
 @font-face {
-  font-family: "AvalonRegular";
-  src: url( /static/fonts/Avalon-Book.eot ); /* IE */  
-  src: url("/static/fonts/Avalon-Book.otf");
-  }
-@font-face {
-  font-family: "AvalonBold";
-  src: url( /static/fonts/Avalon-Bold.eot ); /* IE */  
-  src: url("/static/fonts/Avalon-Bold.otf");
-  }
+    font-family: 'AvalonBold';
+    src: url('avalon-bold-webfont.eot');
+    src: url('avalon-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('avalon-bold-webfont.woff') format('woff'),
+         url('avalon-bold-webfont.ttf') format('truetype'),
+         url('avalon-bold-webfont.svg#avalon_mediumbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
+
+@font-face {
+    font-family: 'AvalonRegular';
+    src: url('avalon-book-webfont.eot');
+    src: url('avalon-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('avalon-book-webfont.woff') format('woff'),
+         url('avalon-book-webfont.ttf') format('truetype'),
+         url('avalon-book-webfont.svg#avalonregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 body {
     font-family: AvalonRegular;
     color: black;
